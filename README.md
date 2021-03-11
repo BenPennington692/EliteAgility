@@ -1,7 +1,8 @@
 # <h2>Elite Agility</h2>
+
 This year you get to nominate and vote for the winners for each movie category in the American Movie Awards.
 
-An instant search tool for looking up movies. After looking up three movies, a voting system is enabled where the anonymous voter nominate movies for different awards. Ones the tallies are in from a large group of voters a secondary vote occurs for runner-up and winner.
+An instant search tool using an API for looking up movies. After looking up three movies, a voting system is enabled where the anonymous voter nominate movies for different awards. Ones the tallies are in from a large group of voters a secondary vote occurs for runner-up and winner.
 
 <a href="http://eliteagility.co" target="_blank">http://eliteagility.co</a>
 
