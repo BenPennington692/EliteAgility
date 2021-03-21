@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Elite Agility Input Box Demo with PHP</title>
+</head>
+
+<body>
+    <h2>Elite Agility</h2>
+    <form action="" method="post">
+        What is the name of a super hero?: 
+        <input type=text name="superhero-name">
+        <br>
+        <br>
+        <input type=submit name="btn_submit">
+        <?php
+            if(isset( $_POST['btn_submit'] ) )
+            {   
+             	// create global variable $a and put value from the text field
+                
+                $a = $_POST['superhero-name'];
+                
+                echo "The super hero is: ".$a;
+            }
+        ?>
+    </form>
+</body>
+</html>
