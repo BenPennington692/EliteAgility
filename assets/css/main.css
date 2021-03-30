@@ -4,3 +4,17 @@
 	position: relative;
 	display: inline-block;
 }
+
+/** Top Menu Colors **/
+.header-area .main-nav .nav li:last-child a {
+  background-color: #9c8d6d;
+}
+
+.header-area .main-nav .nav li:last-child a:hover {
+  background-color: #005500;
+}
+
+.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li a.active {
+  color: #9c8d6d!important;
+}
