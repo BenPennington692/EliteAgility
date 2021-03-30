@@ -9,9 +9,9 @@ This application is an instant search tool using a dataset. After looking up thr
 
 <h2>Contributers</h2>
 <ul>
-  <li>Rick Clinger</li>
-  <li>Andrew Patterson</li>
   <li>Gary Young</li>
   <li>Andy Cha</li>
   <li>Ben Pennington</li>
+  <li>Rick Clinger</li>
+  <li>Andrew Patterson</li>
 </li>
