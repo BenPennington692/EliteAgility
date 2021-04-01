@@ -38,16 +38,16 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="#top" class="logo">Elite <em>Agility</em></a>
+                        <img src="assets/images/logo.png" alt="Logo Picture" width="144" height="105">
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                           <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#features">About</a></li>
-                            <li class="scroll-to-section"><a href="#our-classes">Classes</a></li>
-                            <li class="scroll-to-section"><a href="#schedule">Schedules</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
-                            <li class="main-button"><a href="#">Sign Up</a></li>
+                            <li class="scroll-to-section"><a href="#our-classes">Nominees</a></li>
+                            <li class="scroll-to-section"><a href="#schedule">Movies Database</a></li>
+                            <li class="scroll-to-section"><a href="#contact-us">Actors</a></li> 
+                            <li class="main-button"><a href="#">Vote</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -62,17 +62,16 @@
 
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/images/gym-video.mp4" type="video/mp4" />
-        </video>
+        <div id="bg-video">
+            &nbsp;
+        </div>
 
         <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>work harder, get stronger</h6>
-                <h2>easy with our <em>gym</em></h2>
-                <div class="main-button scroll-to-section">
-                    <a href="#features">Become a member</a>
-                </div>
+            <div class="top-search caption">
+            	<form id="search-form" name="search-form" method="post" action="">
+  					<input type="text" name="search" id="searchbar" accesskey="1" tabindex="1" />
+                    <input name="submit" type="submit" value="Search">
+				</form>
             </div>
         </div>
     </div>
