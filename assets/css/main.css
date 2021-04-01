@@ -57,3 +57,23 @@
 #tabs ul .ui-tabs-active a {
 color: #8f7d41;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Misc. **/
+::selection {
+	background: #BF8B4B;
+	color: #fff;
+}
