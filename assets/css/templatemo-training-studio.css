@@ -701,13 +701,7 @@ features
   color: #ed563b;
   font-weight: 500;
 }
-
 /*
----------------------------------------------
-subscribe
----------------------------------------------
-*/
-
 #call-to-action {
   padding: 120px 0px;
   background-image: url(../images/cta-bg.jpg);
@@ -716,6 +710,7 @@ subscribe
   background-size: cover;
   text-align: center;
 }
+*/
 
 .cta-content h2 {
   font-size: 36px;
@@ -748,6 +743,7 @@ Our Classes
   margin-bottom: 140px;
 }
 
+/*
 #tabs ul {
   margin: 0;
   padding: 0;
@@ -830,7 +826,7 @@ Our Classes
   color: #7a7a7a;
   margin-bottom: 28px;
 }
-
+*/
 
 /* 
 ---------------------------------------------
@@ -883,6 +879,7 @@ schedule
     transition: all 0.5s;
 }
 
+/*
 #schedule .filters {
   margin-bottom: 40px;
 }
@@ -934,7 +931,7 @@ schedule
   visibility: hidden;
   transition: all 350ms;
 }
-
+*/
 
 /* 
 ---------------------------------------------
@@ -942,6 +939,7 @@ trainers
 --------------------------------------------- 
 */
 
+/*
 #trainers .trainer-item {
   background-color: #fff;
   border-radius: 5px;
@@ -992,7 +990,7 @@ trainers
 #trainers .trainer-item ul.social-icons li a:hover {
   color: #ed563b;
 }
-
+*/
 
 /* 
 ---------------------------------------------
@@ -1004,6 +1002,7 @@ contact
   margin-top: 140px;
 }
 
+/*
 #contact-us .container-fluid .col-lg-6 {
   padding: 0px;
 }
@@ -1044,11 +1043,11 @@ contact
   resize: none;
 }
 
-.contact-form ::-webkit-input-placeholder { /* Edge */
+.contact-form ::-webkit-input-placeholder { 
   color: #7a7a7a;
 }
 
-.contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+.contact-form :-ms-input-placeholder { 
   color: #7a7a7a;
 }
 
@@ -1075,7 +1074,7 @@ contact
   background-color: #f9735b;
 }
 
-
+*/
 
 
 /* 
