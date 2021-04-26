@@ -67,3 +67,73 @@ color: #8f7d41;
 	background: #BF8B4B;
 	color: #fff;
 }
+
+/** movie.html & actor.html **/
+.background{
+    background-color: #494949;
+}
+
+.Title{
+    font-size: 52px;
+    text-align-last: center;
+    color: #9E8D6F;
+}
+
+.float-container{
+    border: 3px;
+    padding: 20px;
+}
+
+.float-container .left-container{
+    background-color: white;
+    width: 15%;
+    height: 300px;
+    float: left;
+    padding: 20px;
+    margin-left: 30px;
+    border-style: solid;
+    border-color: rgb(0, 170, 0);
+    border-width: 4px;
+}
+
+.float-container .right-container{
+    font-size: 15px;
+    text-align: left;
+    border-style: solid;
+    border-color: rgb(0, 170, 0);
+    border-width: 4px;
+    float: right;
+    margin-right: 50px;
+    padding: 10px;
+    width: 30%;
+}
+
+.right-container .section-title{
+    font-size: 25px;
+    text-align: left;
+    color: #9E8D6F;
+}
+
+.right-container .info{
+    color: white;
+}
+
+.float-container .middle-container{
+    font-size: 15px;
+    text-align: left;
+    color: white;
+    border-style: solid;
+    border-color: rgb(0, 170, 0);
+    border-width: 4px;
+    float: right;
+    margin-right: 100px;
+    padding: 10px;
+    width: 30%;
+    height: 300px;
+}
+
+.home-button{
+    margin-top: 390px;
+    margin-left: 20px;
+    width: 60px;
+}
