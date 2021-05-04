@@ -21,13 +21,6 @@ var appRouter = function (app) {
     obj = JSON.parse(data);
   });
 
-  app.get("/", function (req, res) {
-    res.write("usage: /movies/category/[CATEGORY]/year/[YEAR]/winner\n");
-    res.write("list of categorys: /movies/category/\n");
-    res.write("useable years: 2001-2017");
-    res.status(200).send();
-  });
-
   app.get("/movies", function (req, res) {
     res.status(200).send(obj);
   });
@@ -35,6 +28,35 @@ var appRouter = function (app) {
   app.get("/movies/*", function (req, res, next) {
     req.out = obj;
     next();
+  });
+
+  app.get("/search", function (req, res) {
+    var catSearch = req.query.category;
+    var yearSearch = req.query.year;
+    var objIn = obj;
+    var newObj = [];
+    if (cats.includes(catSearch) && (yearSearch >= 2001 && yearSearch <= 2017)) {
+      var catIndex = cats.indexOf(catSearch);
+      for (i = 0; i < objIn.length; i++) {
+        if ((objIn[i].category == desc[catIndex]) && (objIn[i].year == yearSearch)) {
+          newObj.push(objIn[i]);
+        }
+      }
+    } else if (cats.includes(catSearch)) {
+      var catIndex = cats.indexOf(catSearch);
+      for (i = 0; i < objIn.length; i++) {
+          if (objIn[i].category == desc[catIndex]) {
+              newObj.push(objIn[i]);
+          } 
+      }
+    } else if (yearSearch >= 2001 && yearSearch <= 2017) {
+      for (i = 0; i < objIn.length; i++) {
+        if (objIn[i].year == yearSearch) {
+            newObj.push(objIn[i]);
+        }
+      }
+    }
+    res.status(200).send(newObj);
   });
 
   app.get("*/category/:cat/*", function (req, res, next) {
