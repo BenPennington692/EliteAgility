@@ -3,13 +3,13 @@
 
     <head>   
         <title>Elite Agility movie-details</title>
-        <link rel="stylesheet" href="movie_details.css">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
-    <body>
+    <body class = "background">
         <header class = "Title">
             <h1>
-                Movie Title
+            Movie
             </h1>
         </header>
         <div class = "float-container">
@@ -18,49 +18,46 @@
             </div>
         
             <div class = "right-container">
-                <h2>
+                <h2 class = "section-title">
                     <u>Movie Details:</u>
                 </h2>
                 
-                <h3>
+                <h3 class = "info">
                     Genre: xxxxx
                 </h3>
                 
-                <h3>
+                <h3 class = "info">
                     Release Date: xxxx
                 </h3>
 
-                <h3>
+                <h3 class = "info">
                     Directors: xxx
                 </h3>
                    
-                <h3>
+                <h3 class = "info">
                     Actors: xx
                 </h3>
 
-                <h3>
+                <h3 class = "info">
                     IMDB Rating: xxx
                 </h3>
 
-                <h3>
+                <h3 class = "info">
                     Awards: xxxxxxxxxxx
                 </h3>
             </div>
-            
-            <div class = "middle-container">
-                <h2>
-                    <u>Plot:</u>
-                </h2>
-                <p>
-                    This movie is about...
-                </p>
+            <div class = "middle-container" id = "plot">
+                
             </div>
 
         </div>
 
     </body>
 
-    <footer>
+    <footer class = "home-button">
         <a href = "index.html"><button>Home</button></a>
     </footer>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="omdb.js"></script>
 </html>
