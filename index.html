@@ -37,18 +37,18 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <img src="assets/images/logo.png" alt="Logo Picture" width = "144px"; height = "105px">
+                        <img src="assets/images/logo.png" alt="Logo Picture" width="144px" height="100px"/>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                           <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#features">About</a></li>
                             <li class="scroll-to-section"><a href="#our-classes">Nominees</a></li>
-                            <li class="scroll-to-section"><a href="#schedule">Movies Database</a></li>
+                            <li class="scroll-to-section"><a href="#schedule">Categories</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Actors</a></li> 
                             <li class="main-button"><a href="#">Vote</a></li>
                         </ul>        
-                        <a class='menu-trigger'>
+                        <a class="menu-trigger">
                             <span>Menu</span>
                         </a>
                         <!-- ***** Menu End ***** -->
@@ -61,9 +61,8 @@
 
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <!--<source src="assets/images/gym-video.mp4" type="video/mp4" />-->
-        </video>
+        <form id = "movieForm" autocomplete = "off">
+        <video autoplay muted loop id="bg-video"></video>
         <div class="video-overlay header-text">
             <div class="top-search caption">
             	<form id="search-form" name="search-form" method="post" action="">
@@ -71,7 +70,11 @@
                     <input name="submit" type="submit" value="Search">
 				</form>
             </div>
+            <div id="result">
+                <!-- This is where OMDB info will display -->
+            </div>
         </div>
+        </form>
     </div>
     <!-- ***** Main Banner Area End ***** -->
 
@@ -82,28 +85,26 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>About This <em>Website</em></h2>
-                        <!--<img src="assets/images/line-dec.png" alt="waves">-->
-                        <p>Allow you to search any previously nominated and/or winning Oscar movies by category of award and vote for your favorite movie.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <ul class="features-items">
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/icon.png" alt="First One" width = "25px"; height = "25px">
+                                <img src="assets/images/icon.png" alt="First One" width = "25px" height = "25px"/>
                             </div>
                             <div class="right-content">
                                 <h4>Search Movies</h4>
-                                <p>Search past Oscar movie nominees/winners along with information with an URL to IMDB for more information and critic opinions.</p>
+                                <p>Search movies using the searchbar. Connected to OMDB REST API. Click movie title to open up more details.</p>
                             </div>
                         </li>
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/movie_icon.jpg" alt="second one" width = "25px"; height = "25px">
+                                <img src="assets/images/movie_icon.jpg" alt="second one" width = "25px" height = "25px"/>
                             </div>
                             <div class="right-content">
-                                <h4>Movie Database</h4>
-                                <p>Search movies by catagory of previous Oscar nominees and/or winners.</p>
+                                <h4>Categories</h4>
+                                <p>Search Grammy award winners by catagory from 2001-2017.</p>
                             </div>
                         </li>
                     </ul>
@@ -112,7 +113,7 @@
                     <ul class="features-items">
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/film_icon.png" alt="third one" width = "25px"; height = "25px">
+                                <img src="assets/images/film_icon.png" alt="third one" width = "25px" height = "25px"/>
                             </div>
                             <div class="right-content">
                                 <h4>Current Nominees</h4>
@@ -122,7 +123,7 @@
                         <li class="feature-item">
                             <div class="left-icon">
                                 <p><br></p>
-                                <img src="assets/images/person_icon.png" alt="fourth one" width = "25px"; height = "25px">
+                                <img src="assets/images/person_icon.png" alt="fourth one" width = "25px" height = "25px"/>
                             </div>
                             <div class="right-content">
                                 <h4>Actors</h4>
@@ -157,7 +158,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading dark-bg">
-                        <h2> <em>Movie Database</em></h2>
+                        <h2> <em>Categories</em></h2>
                         <img src="assets/images/line-dec.png" alt="">
                         <p style = "color: #7a7a7a"> Best Picture | Best Actor | Best Actress | Best Animated Feature | Best Supporting Actress | Best Director | ...</p>
                     </div>
@@ -168,13 +169,13 @@
 
     <!-- ***** Contact Us Area Starts ***** -->
     <section class="section" id="contact-us">
-
         <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading">
-                    <h2><em>Actors</em></h2>
-                    <p>Actors....</p>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2><em>Actors</em></h2>
+                        <p>Actors....</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,6 +198,7 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>
@@ -212,6 +214,9 @@
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- OMDB Search function  -->
+    <script src="assets/js/omdb.js"></script>
 
   </body>
 </html>
