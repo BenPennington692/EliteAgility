@@ -43,6 +43,7 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="/doc/index.htm">Documentation</a></li>
                         </ul>        
                         <a class="menu-trigger">
                             <span>Menu</span>
@@ -64,8 +65,9 @@
         <!--<form id = "movieForm" autocomplete = "off"> -->
             <video autoplay muted loop id="bg-video"></video>
             <div class="video-overlay header-text">
-                <div class="top-search caption">
+                <div class="top-search caption ui-widget">
                     <form id="search-form" name="search-form">
+                        <label for="searchbar"> </label>
                         <input type="text" id="searchbar" accesskey="1" tabindex="1" />
                         <input name="submit" type="submit" value="Search">
                     </form>
@@ -77,113 +79,72 @@
 
     <!-- ***** Main RESULT ***** -->
     <div id="result">
-        <!-- ***** Features Item Start ***** -->
-        <section class="section" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="section-heading">
-                            <h2>About This <em>Website</em></h2>
-                            <!--<img src="assets/images/line-dec.png" alt="waves">-->
-                            <p>Search any previously nominated and winning Oscar movies by category of award.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="features-items">
-                            <li class="feature-item">
-                                <div class="left-icon">
-                                    <img src="assets/images/icon.png" alt="First One" width = "25px"; height = "25px">
-                                </div>
-                                <div class="right-content">
-                                    <h4>Search Movies</h4>
-                                    <p>Search past Oscar movie nominees/winners along with information with an URL to IMDB for more information and critic opinions.</p>
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="left-icon">
-                                    <img src="assets/images/movie_icon.jpg" alt="second one" width = "25px"; height = "25px">
-                                </div>
-                                <div class="right-content">
-                                    <h4>Movie Database</h4>
-                                    <p>Search movies by catagory of previous Oscar nominees and/or winners.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="features-items">
-                            <li class="feature-item">
-                                <div class="left-icon">
-                                    <img src="assets/images/film_icon.png" alt="third one" width = "25px"; height = "25px">
-                                </div>
-                                <div class="right-content">
-                                    <h4>Current Nominees</h4>
-                                    <p>View this year Oscar nominees for 2021.</p>
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="left-icon">
-                                    <p><br></p>
-                                    <img src="assets/images/person_icon.png" alt="fourth one" width = "25px"; height = "25px">
-                                </div>
-                                <div class="right-content">
-                                    <h4>Actors</h4>
-                                    <p>View actors that are in previous Oscar nominated movies.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Features Item End ***** -->
-
-        <!-- ***** Our Classes Start ***** -->
-        <section class="section" id="our-classes">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="section-heading">
-                            <h2>Current <em>Oscar Nominees</em></h2>
-                            <img src="assets/images/line-dec.png" alt="">
-                            <p>THE 93RD ACADEMY AWARDS  2021</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ***** Our Classes End ***** -->
-        <section class="section" id="schedule">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="section-heading dark-bg">
-                            <h2> <em>Movie Database</em></h2>
-                            <img src="assets/images/line-dec.png" alt="">
-                            <p style = "color: #7a7a7a"> Best Picture | Best Actor | Best Actress | Best Animated Feature | Best Supporting Actress | Best Director | ...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <!-- ***** RESULT END ***** -->
-    <!-- ***** Contact Us Area Starts ***** -->
-    <section class="section" id="contact-us">
+    <!-- ***** About Area Starts ***** -->
+    <!-- ***** Features Item Start ***** -->
+    <section class="section" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2><em>Actors</em></h2>
-                        <p>Actors....</p>
+                        <h2>About This <em>Website</em></h2>
+                        <!--<img src="assets/images/line-dec.png" alt="waves">-->
+                        <p>Search any previously nominated and winning Oscar movies by category of award.</p>
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/icon.png" alt="First One" width = "25px"; height = "25px">
+                            </div>
+                            <div class="right-content">
+                                <h4>Search Movies</h4>
+                                <p>Search past Oscar movie nominees/winners along with information with an URL to IMDB for more information and critic opinions.</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/movie_icon.jpg" alt="second one" width = "25px"; height = "25px">
+                            </div>
+                            <div class="right-content">
+                                <h4>Movie Database</h4>
+                                <p>Search movies by catagory of previous Oscar nominees and/or winners.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/film_icon.png" alt="third one" width = "25px"; height = "25px">
+                            </div>
+                            <div class="right-content">
+                                <h4>Current Nominees</h4>
+                                <p>View this year Oscar nominees for 2021.</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <p><br></p>
+                                <img src="assets/images/person_icon.png" alt="fourth one" width = "25px"; height = "25px">
+                            </div>
+                            <div class="right-content">
+                                <h4>Actors</h4>
+                                <p>View actors that are in previous Oscar nominated movies.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ***** Features Item End ***** -->
 
-    <!-- ***** Contact Us Area Ends ***** -->
+
+    <!-- ***** About Area Ends ***** -->
     
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -200,6 +161,7 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap -->

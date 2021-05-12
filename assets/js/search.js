@@ -1,16 +1,20 @@
 $(document).ready(function () {
+
 	var apikey = "c406f281";
-
-
 	$("#search-form").submit(function(e) {
 		e.preventDefault()
 		var result = ""
 		var url = "http://www.omdbapi.com/?apikey="+apikey
+
+		// searchbar
 		var movie = $("#searchbar").val()
+		// shrink size of search area to make room below
 		$("#searcharea").css("bottom", "60%")
+		// bring top of result DIV higher to meet search area
 		$("#result").addClass('showResult')
 		$(".main-banner .caption").addClass('singlePage')
-		$.ajax({		
+
+		$.ajax({
 			method:'GET',
 			url:url+"&t="+movie,
 			success:function(data){ 
@@ -26,10 +30,19 @@ $(document).ready(function () {
 					<h3>${data.Actors}</h3>
 				</div>
 				`
-				
 				$("#result").empty().append(result)
 				
 			}
 		})
 	})
 });
+
+$( function() {
+	var cats = ['leadactor', 'supportactor', 'leadactress', 'supportactress', 'animatedfilm', 'cinematography',
+	'costumes', 'directing', 'featuredoc', 'shortdoc', 'filmediting', 'foreign', 'makeup',
+	'originalmusic', 'originalsong', 'bestpicture', 'production', 'animatedshort', 'liveshort',
+	'soundediting', 'soundmixing', 'visualfx', 'adaptedwriting', 'originalwriting'];
+	$( "#searchbar" ).autocomplete({
+		source: cats
+	});
+	} );

@@ -52,6 +52,12 @@
     position: inherit !important;
 }
 
+/** Fixing weird BG highlight on search form **/
+.main-banner .caption {
+    background:transparent !important;
+    
+}
+
 /** update searchbar spacing upon showResult **/
 .main-banner .caption.singlePage {
     top:70%;
