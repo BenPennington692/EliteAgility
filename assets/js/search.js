@@ -20,14 +20,44 @@ $(document).ready(function () {
 			success:function(data){ 
 				console.log(data); 
 				result = `
-				<img src="${data.Poster}" width="100%" height="auto" style="float:left" class="img-th poster" />
-				<div id="movie-info">
-					<h2>${data.Title}</h2>
-					<h3>${data.Released}</h3>
-					<h3>${data.Runtime}</h3>
-					<h3>${data.Genre}</h3>
-					<h3>${data.Director}</h3>
-					<h3>${data.Actors}</h3>
+				<header class = "Title">
+            <h1>${data.Title}</h1>
+        </header>
+				<div clss="container">
+					<div class = "float-container">
+						<div class = "left-container">
+							<img src="${data.Poster}" width="100%" height="auto" style="float:left" class="img-th poster" />
+						</div>
+						<div class = "right-container">
+								<h2 class = "section-title">
+										<u>Movie Details:</u>
+								</h2>
+								<h3 class = "info">
+										<em>Release Date:</em> ${data.Released}
+								</h3>
+								<h3 class = "info">
+										<em>Runtime:</em> ${data.Runtime}
+								</h3>
+								<h3 class = "info">
+										<em>Genre:</em> ${data.Genre}
+								</h3>
+								<h3 class = "info">
+										<em>Directors:</em> ${data.Director}
+								</h3>
+								<h3 class = "info">
+										<em>Actors:</em> ${data.Actors}
+								</h3>
+								<h3 class = "info">
+										<em>IMDB Rating:</em> ${data.imdbRating}
+								</h3>
+								<h3 class = "info">
+										<em>Awards:</em> ${data.Awards}
+								</h3>
+						</div>
+						<div class="middle-container" id="plot">
+								
+						</div>
+					</div>
 				</div>
 				`
 				$("#result").empty().append(result)
@@ -37,12 +67,3 @@ $(document).ready(function () {
 	})
 });
 
-$( function() {
-	var cats = ['leadactor', 'supportactor', 'leadactress', 'supportactress', 'animatedfilm', 'cinematography',
-	'costumes', 'directing', 'featuredoc', 'shortdoc', 'filmediting', 'foreign', 'makeup',
-	'originalmusic', 'originalsong', 'bestpicture', 'production', 'animatedshort', 'liveshort',
-	'soundediting', 'soundmixing', 'visualfx', 'adaptedwriting', 'originalwriting'];
-	$( "#searchbar" ).autocomplete({
-		source: cats
-	});
-	} );

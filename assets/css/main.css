@@ -125,18 +125,18 @@ color: #8f7d41;
 }
 
 .float-container .left-container{
-    background-color: white;
-    width: 15%;
-    height: 300px;
+    background-color: aliceblue;
+    width: 22%;
     float: left;
     padding: 20px;
-    margin-left: 30px;
+    margin: 0 20px;
     border-style: solid;
     border-color: rgb(0, 170, 0);
     border-width: 4px;
 }
 
 .float-container .right-container{
+    background-color: aliceblue;
     font-size: 15px;
     text-align: left;
     border-style: solid;
