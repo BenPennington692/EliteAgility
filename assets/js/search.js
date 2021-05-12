@@ -1,25 +1,25 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-	var apikey = "c406f281";
-	$("#search-form").submit(function(e) {
-		e.preventDefault()
-		var result = ""
-		var url = "http://www.omdbapi.com/?apikey="+apikey
+    var apikey = "c406f281";
+    $("#search-form").submit(function(e) {
+        e.preventDefault()
+        var result = ""
+        var url = "http://www.omdbapi.com/?apikey=" + apikey
 
-		// searchbar
-		var movie = $("#searchbar").val()
-		// shrink size of search area to make room below
-		$("#searcharea").css("bottom", "60%")
-		// bring top of result DIV higher to meet search area
-		$("#result").addClass('showResult')
-		$(".main-banner .caption").addClass('singlePage')
+        // searchbar
+        var movie = $("#searchbar").val()
+            // shrink size of search area to make room below
+        $("#searcharea").css("bottom", "60%")
+            // bring top of result DIV higher to meet search area
+        $("#result").addClass('showResult')
+        $(".main-banner .caption").addClass('singlePage')
 
-		$.ajax({
-			method:'GET',
-			url:url+"&t="+movie,
-			success:function(data){ 
-				console.log(data); 
-				result = `
+        $.ajax({
+            method: 'GET',
+            url: url + "&t=" + movie,
+            success: function(data) {
+                var imdburl = "HTTPS://imdb.com/title/" + data.imdbID,
+                    result = `
 				<header class = "Title">
             <h1>${data.Title}</h1>
         </header>
@@ -53,6 +53,9 @@ $(document).ready(function () {
 								<h3 class = "info">
 										<em>Awards:</em> ${data.Awards}
 								</h3>
+								<h3 class = "info">
+										<em>IMDB:</em> <a href="${imdburl}" target="_blank" class="imdblink"> This is the movie link </a>
+								</h3>
 						</div>
 						<div class="middle-container" id="plot">
 								
@@ -60,10 +63,9 @@ $(document).ready(function () {
 					</div>
 				</div>
 				`
-				$("#result").empty().append(result)
-				
-			}
-		})
-	})
-});
+                $("#result").empty().append(result)
 
+            }
+        })
+    })
+});
