@@ -179,7 +179,7 @@ color: #8f7d41;
     width: 60px;
 }
 
-.imdblink a{
+.imdblink a:active, .imdblink a:active{
     color:rgb(0, 121, 0);
     outline: none;
 }
