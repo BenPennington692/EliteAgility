@@ -67,6 +67,7 @@
 .showResult {
 	position: absolute;
 	top: 40%;
+    background-color: white;
 }
 
 #movie-info {
@@ -176,4 +177,9 @@ color: #8f7d41;
     margin-top: 390px;
     margin-left: 20px;
     width: 60px;
+}
+
+.imdblink a{
+    color:rgb(0, 121, 0);
+    outline: none;
 }
