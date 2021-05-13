@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>   
+        <title>Elite Agility api-documentation</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+<body class = "background">
+
+    <p style="text-align: left;"><a href="http://rickclinger.diskstation.me:8080"><img src="assets/images/web-logo.png" alt="Home" /></a></p>
+    <header class = "Title">
+        <h2 style="text-align: center;">API Documentation</h2>
+    </header>
+    <div class = "doc-block">
+            <h3>List of Oscar categories*</h3>
+            <table border="1">
+            <tbody>
+            <tr>
+            <td style="text-align: center;"><strong>Useable in API</strong></td>
+            <td style="text-align: center;"><strong>Oscar Category</strong></td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">leadactor&nbsp;</td>
+            <td>&nbsp;Actor in a Leading Role</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">supportactor&nbsp;</td>
+            <td>&nbsp;Actor in a Supporting Role</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">leadactress&nbsp;</td>
+            <td>&nbsp;Actress in a Leading Role</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">supportactress&nbsp;</td>
+            <td>&nbsp;Actress in a Supporting Role</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">animatedfilm&nbsp;</td>
+            <td>&nbsp;Animated Feature Film</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">cinematography&nbsp;</td>
+            <td>&nbsp;Cinematography</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">costumes&nbsp;</td>
+            <td>&nbsp;Costume Design</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">directing&nbsp;</td>
+            <td>&nbsp;Directing</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">featuredoc&nbsp;</td>
+            <td>&nbsp;Documentary (Feature)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">shortdoc&nbsp;</td>
+            <td>&nbsp;Documentary (Short Subject)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">filmediting&nbsp;</td>
+            <td>&nbsp;Film Editing</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">foreign&nbsp;</td>
+            <td>&nbsp;Foreign Language Film</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">makeup&nbsp;</td>
+            <td>&nbsp;Makeup and Hairstyling</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">originalmusic&nbsp;</td>
+            <td>&nbsp;Music (Original Score)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">originalsong&nbsp;</td>
+            <td>&nbsp;Music (Original Song)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">bestpicture&nbsp;</td>
+            <td>&nbsp;Best Picture</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">production&nbsp;</td>
+            <td>&nbsp;Production Design</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">animatedshort&nbsp;</td>
+            <td>&nbsp;Short Film (Animated)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">liveshort&nbsp;</td>
+            <td>&nbsp;Short Film (Live Action)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">soundediting&nbsp;</td>
+            <td>&nbsp;Sound Editing</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">soundmixing&nbsp;</td>
+            <td>&nbsp;Sound Mixing</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">visualfx&nbsp;</td>
+            <td>&nbsp;Visual Effects</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">adaptedwriting&nbsp;</td>
+            <td>&nbsp;Writing (Adapted Screenplay)</td>
+            </tr>
+            <tr>
+            <td style="text-align: right;">originalwriting&nbsp;</td>
+            <td>&nbsp;Writing (Original Screenplay)</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>*Not all categories are available in all years</p>
+            <p>*For simplicity, Oscar nominations are only available in the year range of 2001-2017</p>
+    </div>
+        
+        <div class = "example-title">
+            <h2>Examples</h2>
+            <p>(Images are clickable examples)</p>
+        </div>
+        
+        <div class = "doc-block">
+            <h4>To view the entire JSON collection:</h4>
+            <p><a href="http://rickclinger.diskstation.me:8080/movies/">http://rickclinger.diskstation.me:8080/movies/</a></p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/"><img src="assets/images/Example1.png" alt="Example 1" /></a></p>
+            </div>
+        </div>
+        
+        <div class = "doc-block">
+            <h4>A collection resource in JSON can be delivered in the following format:</h4>
+            <p>http://rickclinger.diskstation.me:8080/movies/category/[CATEGORY]/year/[YEAR]</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/category/leadactor/year/2002"><img src="assets/images/Example2.png" alt="Example 2" /></a></p>
+            </div>
+            <h4>The API is not restricted to the above. The items can be used in any order, such like the following:</h4>
+            <p>http://rickclinger.diskstation.me:8080/movies/winner/category/[CATEGORY]</p>
+            <div class = "doc-image">   
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/winner/category/leadactor"><img src="assets/images/Example3.png" alt="Example 3" /></a></p>
+            </div>
+            <p>http://rickclinger.diskstation.me:8080/movies/year/[YEAR]</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/year/2003"><img src="assets/images/Example4.png" alt="Example 4" /></a></p>
+            </div>
+        </div>
+        
+        <div class = "doc-block">
+            <h4>A singleton resource in JSON can be delivered in the following format:</h4>
+            <p>http://rickclinger.diskstation.me:8080/movies/category/[CATEGORY]/year/[YEAR]/winner</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/category/leadactress/year/2004/winner"><img src="assets/images/Example5.png" alt="Example 5" /></a></p>
+            </div>
+            <h4>Like with the collection resource. the API is not restricted to the above.The items can be used in any order, such like the following:</h4>
+            <p>http://rickclinger.diskstation.me:8080/movies/winner/year/[YEAR]/category/[CATEGORY]</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/movies/winner/year/2005/category/supportactress"><img src="assets/images/Example6.png" alt="Example 6" /></a></p>
+            </div>
+        </div>
+        
+        <div class = "doc-block">
+            <h4>A parameterized search can also be done in the following formats:</h4>
+            <p>http://rickclinger.diskstation.me:8080/search?category=[CATEGORY]&amp;year=[YEAR]</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/search?category=animatedfilm&year=2006"><img src="assets/images/Example7.png" alt="Example 7" /></a></p>
+            </div>
+            <p>http://rickclinger.diskstation.me:8080/search?year=[YEAR]</p>
+            <div class = "doc-image">
+                <p><a href="http://rickclinger.diskstation.me:8080/search?year=2007"><img src="assets/images/Example8.png" alt="Example 8" /></a></p>
+            </div>
+        </div>
+        
+</body>

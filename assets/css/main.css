@@ -153,6 +153,32 @@ color: #8f7d41;
     height: 300px;
 }
 
+.doc-block{
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: rgb(0, 170, 0);
+    border-width: 4px;
+    clear: both;
+}
+
+.doc-block .doc-image{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.example-title{
+    font-size: 25px;
+    padding: 20px;
+    text-align: left;
+    color: #9E8D6F;
+    clear: both;
+}
+
 .home-button{
     margin-top: 390px;
     margin-left: 20px;
