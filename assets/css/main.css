@@ -6,13 +6,6 @@
 }
 
 /** Top Menu Colors **/
-.header-area .main-nav .nav li:last-child a {
-  background-color: #9c8d6d;
-}
-
-.header-area .main-nav .nav li:last-child a:hover {
-  background-color: #005500;
-}
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
@@ -25,6 +18,19 @@
 .header-area .main-nav .nav li:last-child a:hover {
 	background-color: transparent;
 }
+
+@media (max-width: 767px) {
+    /** Mobile Top Menu Colors **/
+    .header-area .main-nav .nav li:last-child,
+    .header-area .main-nav .nav li:last-child a {
+    background-color: #003300 !important;
+    }
+    .header-area .main-nav .nav li:last-child:hover a,
+    .header-area .main-nav .nav li:last-child a:hover {
+        background-color: transparent !important;
+    }
+}
+
 
 /** Search bar **/
 #searchbar {
