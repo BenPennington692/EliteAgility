@@ -24,11 +24,11 @@ $(document).ready(function() {
             <h1>${data.Title}</h1>
         </header>
 				<div clss="container">
-					<div class = "float-container">
-						<div class = "left-container">
-							<img src="${data.Poster}" width="100%" height="auto" style="float:left" class="img-th poster" />
+					<div class = "row content float-container">
+						<div class = "col-lg-3">
+							<img src="${data.Poster}" width="100%" height="auto" class="left-container img-th poster" />
 						</div>
-						<div class = "right-container">
+						<div class = "col-lg-5" middle-container>
 								<h2 class = "section-title">
 										<u>Movie Details:</u>
 								</h2>
@@ -57,15 +57,27 @@ $(document).ready(function() {
 										<em>IMDB:</em> <a href="${imdburl}" target="_blank" class="imdblink"> This is the movie link </a>
 								</h3>
 						</div>
-						<div class="middle-container" id="plot">
-								
+						<div class="col-lg-3 right-container" id="plot">
+						<h2 class="section-title">Plot</h2>
+								${data.Plot}
 						</div>
 					</div>
 				</div>
 				`
                 $("#result").empty().append(result)
+								resultsFix();
 
             }
         })
     })
 });
+
+// Window Resize Mobile Menu Fix
+$(window).on('resize', function() {
+	resultsFix();
+});
+
+function resultsFix() {
+	var resultBottom = $('#result').height();
+	$('#about').css({"position":"absolute", "top":resultBottom+200})
+}

@@ -98,15 +98,14 @@
 
 	// Page loading animation
 	 $(window).on('load', function() {
-
         $('#js-preloader').addClass('loaded');
-
     });
 
 
 	// Window Resize Mobile Menu Fix
 	$(window).on('resize', function() {
 		mobileNav();
+		resultsFix();
 	});
 
 
@@ -119,6 +118,11 @@
 				$(this).find('ul').toggleClass('active');
 			}
 		});
+	}
+
+	function resultsFix() {
+		var resultBottom = $('#result').height();
+		$('#about').css({"position":"absolute", "top":resultBottom+200})
 	}
 
 

@@ -6,13 +6,6 @@
 }
 
 /** Top Menu Colors **/
-.header-area .main-nav .nav li:last-child a {
-  background-color: #9c8d6d;
-}
-
-.header-area .main-nav .nav li:last-child a:hover {
-  background-color: #005500;
-}
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
@@ -25,6 +18,19 @@
 .header-area .main-nav .nav li:last-child a:hover {
 	background-color: transparent;
 }
+
+@media (max-width: 767px) {
+    /** Mobile Top Menu Colors **/
+    .header-area .main-nav .nav li:last-child,
+    .header-area .main-nav .nav li:last-child a {
+    background-color: #003300 !important;
+    }
+    .header-area .main-nav .nav li:last-child:hover a,
+    .header-area .main-nav .nav li:last-child a:hover {
+        background-color: transparent !important;
+    }
+}
+
 
 /** Search bar **/
 #searchbar {
@@ -73,6 +79,11 @@
 #movie-info {
     padding-left: 1rem;
     position: realtive;
+}
+
+h3 em {
+    font-weight: bold;
+    color: #043b14;
 }
 
 /** Button Colors **/
@@ -126,9 +137,7 @@ color: #8f7d41;
 }
 
 .float-container .left-container{
-    background-color: aliceblue;
-    width: 22%;
-    float: left;
+    background-color: #4e5760;
     padding: 20px;
     margin: 0 20px;
     border-style: solid;
@@ -137,16 +146,11 @@ color: #8f7d41;
 }
 
 .float-container .right-container{
-    background-color: aliceblue;
+    background-color: #4e5760;
     font-size: 15px;
     text-align: left;
     border-style: solid;
     border-color: rgb(0, 170, 0);
-    border-width: 4px;
-    float: right;
-    margin-right: 50px;
-    padding: 10px;
-    width: 30%;
 }
 
 .right-container .section-title{
@@ -155,12 +159,31 @@ color: #8f7d41;
     color: #9E8D6F;
 }
 
-.right-container .info{
-    color: black;
+.middle-container .info{
+    color: white;
 }
 
-#result{
-    background-color: #494949;
+.float-container .right-container,
+.float-container .middle-container{
+    background-color: #4e5760;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+    border-style: solid;
+    border-color: rgb(0, 170, 0);
+    border-width: 4px;
+    padding: 10px;
+    margin: 0 30px;
+}
+/** Spacing above the plot area for mobile **/
+@media (max-width: 993px) {
+    .float-container .right-container,
+    .float-container .middle-container {
+        margin: 30px !important;
+    }
+    .float-container .left-container {
+        margin-bottom: 30px;
+    }
 }
 
 .doc-block{
