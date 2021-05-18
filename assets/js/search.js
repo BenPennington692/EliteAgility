@@ -28,7 +28,7 @@ $(document).ready(function() {
 						<div class = "col-lg-3">
 							<img src="${data.Poster}" width="100%" height="auto" class="left-container img-th poster" />
 						</div>
-						<div class = "col-lg-6" middle-container>
+						<div class = "col-lg-5" middle-container>
 								<h2 class = "section-title">
 										<u>Movie Details:</u>
 								</h2>
