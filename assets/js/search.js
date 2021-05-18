@@ -24,11 +24,11 @@ $(document).ready(function() {
             <h1>${data.Title}</h1>
         </header>
 				<div clss="container">
-					<div class = "float-container">
-						<div class = "left-container">
-							<img src="${data.Poster}" width="100%" height="auto" style="float:left" class="img-th poster" />
+					<div class = "row content float-container">
+						<div class = "col-lg-3">
+							<img src="${data.Poster}" width="100%" height="auto" class="left-container img-th poster" />
 						</div>
-						<div class = "right-container">
+						<div class = "col-lg-6" middle-container>
 								<h2 class = "section-title">
 										<u>Movie Details:</u>
 								</h2>
@@ -57,8 +57,8 @@ $(document).ready(function() {
 										<em>IMDB:</em> <a href="${imdburl}" target="_blank" class="imdblink"> This is the movie link </a>
 								</h3>
 						</div>
-						<div class="middle-container" id="plot">
-								
+						<div class="col-lg-3 right-container" id="plot">
+								${data.Plot}
 						</div>
 					</div>
 				</div>
