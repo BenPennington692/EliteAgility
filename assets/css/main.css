@@ -176,6 +176,16 @@ color: #8f7d41;
     padding: 10px;
     margin: 0 30px;
 }
+/** Spacing above the plot area for mobile **/
+@media (max-width: 993px) {
+    .float-container .right-container,
+    .float-container .middle-container {
+        margin: 30px !important;
+    }
+    .float-container .left-container {
+        margin-bottom: 30px;
+    }
+}
 
 .doc-block{
     background-color: white;

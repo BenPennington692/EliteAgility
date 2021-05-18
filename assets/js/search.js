@@ -58,14 +58,26 @@ $(document).ready(function() {
 								</h3>
 						</div>
 						<div class="col-lg-3 right-container" id="plot">
+						<h2 class="section-title">Plot</h2>
 								${data.Plot}
 						</div>
 					</div>
 				</div>
 				`
                 $("#result").empty().append(result)
+								resultsFix();
 
             }
         })
     })
 });
+
+// Window Resize Mobile Menu Fix
+$(window).on('resize', function() {
+	resultsFix();
+});
+
+function resultsFix() {
+	var resultBottom = $('#result').height();
+	$('#about').css({"position":"absolute", "top":resultBottom+200})
+}
